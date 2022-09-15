@@ -4,10 +4,9 @@ import 'package:cancer_prediction_app/home.dart';
 import 'package:flutter/material.dart';
 import './../components/choice_button.dart';
 import './../components/next_button.dart';
-import 'package:cancer_prediction_app/non_small_lung_cancer/nscl_histologic_subtype.dart';
 
-class NsclClinicalSymptomPage extends StatelessWidget {
-  const NsclClinicalSymptomPage({Key? key}) : super(key: key);
+class NsclBiomarkerTesting2 extends StatelessWidget {
+  const NsclBiomarkerTesting2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,38 +21,50 @@ class NsclClinicalSymptomPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            const PageTitle(pageTitle: 'Clinical Presentation'),
+            const PageTitle(pageTitle: 'Biomarker Testing'),
+            const Text('Perform the following Molecular Tests.'),
             ChoiceButton(
-              text:
-                  'Establish histologic subtypea with adequate tissue for molecular testing',
-              onTap: () {
-                print('working ...');
-              },
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'Consider rebiopsy or plasma testing if appropriate',
+              text: 'EGFR mutation (category 1)',
               onTap: () {},
               infoPage: () {},
             ),
             ChoiceButton(
-              text: 'Smoking cessation counselling',
+              text: 'ALK (category 1)',
               onTap: () {},
               infoPage: () {},
             ),
             ChoiceButton(
-              text: 'Integrate palliative care',
+              text: 'KRAS',
+              onTap: () {},
+              infoPage: () {},
+            ),
+            ChoiceButton(
+              text: 'ROS1',
+              onTap: () {},
+              infoPage: () {},
+            ),
+            ChoiceButton(
+              text: 'BRAF',
+              onTap: () {},
+              infoPage: () {},
+            ),
+            ChoiceButton(
+              text: ' NTRK1/2/3',
+              onTap: () {},
+              infoPage: () {},
+            ),
+            ChoiceButton(
+              text: ' METex14 skipping',
+              onTap: () {},
+              infoPage: () {},
+            ),
+            ChoiceButton(
+              text: 'RET',
               onTap: () {},
               infoPage: () {},
             ),
             NextButton(
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return const NsclHistologicSubtype();
-                  },
-                ));
-              },
+              onTap: () {},
             ),
           ],
         ),

@@ -2,6 +2,7 @@ import 'package:cancer_prediction_app/components/choice_button.dart';
 import 'package:flutter/material.dart';
 import './home.dart';
 import './components/choice_button.dart';
+import './non_small_lung_cancer/nscl_biomarker_testing_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: primaryBlack,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      // home: const HomePage(),
+      home: const NsclBiomarkerTesting1(),
     );
   }
 }

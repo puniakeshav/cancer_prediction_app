@@ -1,3 +1,4 @@
+import 'package:cancer_prediction_app/components/choice_button.dart';
 import 'package:flutter/material.dart';
 import 'non_small_lung_cancer/nscl_clinical_symptoms_page.dart';
 
@@ -25,29 +26,16 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 25),
               ),
             ),
-            SizedBox(
-              height: 50,
-              width: 300,
-              child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (BuildContext context){
-                        return const NsclClinicalSymptomPage();
-                      },)
-                    );
+            ChoiceButton(
+              text: 'Non-Small Cell Lung Cancer',
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return const NsclClinicalSymptomPage();
                   },
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white),
-                    padding: MaterialStateProperty.all(const EdgeInsets.all(5)),
-                    textStyle:
-                        MaterialStateProperty.all(const TextStyle(fontSize: 30, color: Colors.black)),
-                    side: MaterialStateProperty.all(const BorderSide(width: 2.0, color: Colors.black)),
-                        
-                  ),
-                  child: const Text('Non Small Lung Cancer', style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.black,
-                  ),)),
+                ));
+              },
+              infoPage: () {},
             ),
           ],
         ),

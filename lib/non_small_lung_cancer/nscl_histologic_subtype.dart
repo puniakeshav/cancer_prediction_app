@@ -4,10 +4,11 @@ import 'package:cancer_prediction_app/home.dart';
 import 'package:flutter/material.dart';
 import './../components/choice_button.dart';
 import './../components/next_button.dart';
-import 'package:cancer_prediction_app/non_small_lung_cancer/nscl_histologic_subtype.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl_biomarker_testing_1.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl_biomarker_testing_2.dart';
 
-class NsclClinicalSymptomPage extends StatelessWidget {
-  const NsclClinicalSymptomPage({Key? key}) : super(key: key);
+class NsclHistologicSubtype extends StatelessWidget {
+  const NsclHistologicSubtype({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,38 +23,29 @@ class NsclClinicalSymptomPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            const PageTitle(pageTitle: 'Clinical Presentation'),
+            const PageTitle(pageTitle: 'Histologic Subtype'),
             ChoiceButton(
-              text:
-                  'Establish histologic subtypea with adequate tissue for molecular testing',
-              onTap: () {
-                print('working ...');
-              },
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'Consider rebiopsy or plasma testing if appropriate',
+              text: 'Adenocarcinoma',
               onTap: () {},
               infoPage: () {},
             ),
             ChoiceButton(
-              text: 'Smoking cessation counselling',
+              text: 'Large cell',
               onTap: () {},
               infoPage: () {},
             ),
             ChoiceButton(
-              text: 'Integrate palliative care',
+              text: 'NSCLC not otherwise specified (NOS)',
+              onTap: () {},
+              infoPage: () {},
+            ),
+            ChoiceButton(
+              text: 'Squamous cell carcinoma',
               onTap: () {},
               infoPage: () {},
             ),
             NextButton(
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return const NsclHistologicSubtype();
-                  },
-                ));
-              },
+              onTap: () {},
             ),
           ],
         ),
