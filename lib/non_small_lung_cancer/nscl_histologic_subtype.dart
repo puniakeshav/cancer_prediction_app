@@ -19,6 +19,7 @@ class NsclHistologicSubtype extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text('Cancer Prediction App'),
+        backgroundColor:  Color.fromARGB(200, 97, 79, 233),
       ),
       body: Center(
         child: Column(
@@ -44,11 +45,17 @@ class NsclHistologicSubtype extends StatelessWidget {
               onTap: () {},
               infoPage: () {},
             ),
-            NextButton(
-              onTap: () {},
-            ),
           ],
         ),
+      ),
+      bottomNavigationBar: NextButton(
+        onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return const NsclBiomarkerTesting1();
+                  },
+                ));
+              },
       ),
     );
   }

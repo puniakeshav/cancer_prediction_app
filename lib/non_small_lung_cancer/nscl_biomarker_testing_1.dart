@@ -18,6 +18,7 @@ class NsclBiomarkerTesting1 extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text('Cancer Prediction App'),
+        backgroundColor:  Color.fromARGB(200, 97, 79, 233),
       ),
       body: Center(
         child: Expanded(
@@ -77,10 +78,12 @@ class NsclBiomarkerTesting1 extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: NextButton(
-        onTap: () {
-          print('next button working...');
-        },
+      bottomNavigationBar: Container(
+        child: NextButton(
+          onTap: () {
+            print('next button working...');
+          },
+        ),
       ),
     );
   }

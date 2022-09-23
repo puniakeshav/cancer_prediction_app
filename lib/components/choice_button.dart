@@ -26,7 +26,12 @@ class ChoiceButton extends StatelessWidget {
               textStyle: MaterialStateProperty.all(
                   const TextStyle(fontSize: 30, color: Colors.black)),
               side: MaterialStateProperty.all(
-                  const BorderSide(width: 2.0, color: Colors.black)),
+                  const BorderSide(width: 2.0, color: Color.fromARGB(200, 97, 79, 233))),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    )
+                  ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -40,6 +45,7 @@ class ChoiceButton extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 20,
                         color: Colors.black,
+                        fontFamily: 'OpenSans',
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -48,7 +54,7 @@ class ChoiceButton extends StatelessWidget {
                 IconButton(
                   icon: const Icon(
                     Icons.info_outlined,
-                    color: Colors.black,
+                    color: Color.fromARGB(200, 97, 79, 233),
                     size: 30,
                   ),
                   onPressed: infoPage,

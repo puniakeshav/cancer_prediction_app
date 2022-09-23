@@ -10,17 +10,22 @@ class NextButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: SizedBox(
-        height: 70,
-        width: 300,
+        height: 50,
+        width: 200,
         child: ElevatedButton(
             onPressed: onTap,
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.black),
+              backgroundColor: MaterialStateProperty.all( Color.fromARGB(200, 97, 79, 233)),
               padding: MaterialStateProperty.all(const EdgeInsets.all(5)),
               textStyle: MaterialStateProperty.all(
-                  const TextStyle(fontSize: 30, color: Colors.black)),
+              const TextStyle(fontSize: 30, color: Colors.black)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                )
+              ),
               side: MaterialStateProperty.all(
-                  const BorderSide(width: 2.0, color: Colors.black)),
+                  const BorderSide(width: 2.0, color: Color.fromARGB(200, 97, 79, 233))),
             ),
             child: const Text(
               'NEXT',

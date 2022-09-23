@@ -18,6 +18,7 @@ class NsclClinicalSymptomPage extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text('Cancer Prediction App'),
+        backgroundColor:  Color.fromARGB(200, 97, 79, 233),
       ),
       body: Center(
         child: Column(
@@ -46,18 +47,28 @@ class NsclClinicalSymptomPage extends StatelessWidget {
               onTap: () {},
               infoPage: () {},
             ),
-            NextButton(
-              onTap: () {
+          ],
+        ),
+      ),
+      floatingActionButton: NextButton(
+        onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) {
                     return const NsclHistologicSubtype();
                   },
                 ));
               },
-            ),
-          ],
-        ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // bottomNavigationBar: NextButton(
+      //   onTap: () {
+      //           Navigator.of(context).push(MaterialPageRoute(
+      //             builder: (BuildContext context) {
+      //               return const NsclHistologicSubtype();
+      //             },
+      //           ));
+      //         },
+      // ),
     );
   }
 }
