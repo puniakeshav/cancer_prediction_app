@@ -18,45 +18,81 @@ class NsclHistologicSubtype extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text('Cancer Prediction App'),
-        backgroundColor:  Color.fromARGB(200, 97, 79, 233),
+        title: const Text(
+          'Cancer Prediction App',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Color.fromARGB(255, 184, 165, 230),
       ),
       body: Center(
-        child: Column(
-          children: <Widget>[
-            const PageTitle(pageTitle: 'Histologic Subtype'),
-            ChoiceButton(
-              text: 'Adenocarcinoma',
-              onTap: () {},
-              infoPage: () {},
+        child: Card(
+          elevation: 30,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            side: BorderSide(
+              color: Colors.white,
             ),
-            ChoiceButton(
-              text: 'Large cell',
-              onTap: () {},
-              infoPage: () {},
+          ),
+          child: SizedBox(
+            height: 500,
+            width: 350,
+            child: Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Image.asset(
+                        "assets/images/vector.jpg",
+                        height: 100,
+                        width: 100,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, 50, 60, 20),
+                      child: Text(
+                        'Histologic Subtype',
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    ChoiceButton(
+                      text: 'Adenocarcinoma',
+                      onTap: () {},
+                      infoPage: () {},
+                    ),
+                    ChoiceButton(
+                      text: 'Large cell',
+                      onTap: () {},
+                      infoPage: () {},
+                    ),
+                    ChoiceButton(
+                      text: 'NSCLC not otherwise specified (NOS)',
+                      onTap: () {},
+                      infoPage: () {},
+                    ),
+                    ChoiceButton(
+                      text: 'Squamous cell carcinoma',
+                      onTap: () {},
+                      infoPage: () {},
+                    ),
+                  ],
+                ),
+              ),
             ),
-            ChoiceButton(
-              text: 'NSCLC not otherwise specified (NOS)',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'Squamous cell carcinoma',
-              onTap: () {},
-              infoPage: () {},
-            ),
-          ],
+          ),
         ),
       ),
       bottomNavigationBar: NextButton(
         onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return const NsclBiomarkerTesting1();
-                  },
-                ));
-              },
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) {
+              return const NsclBiomarkerTesting1();
+            },
+          ));
+        },
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

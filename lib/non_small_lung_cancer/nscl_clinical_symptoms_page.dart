@@ -17,47 +17,80 @@ class NsclClinicalSymptomPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text('Cancer Prediction App'),
-        backgroundColor:  Color.fromARGB(200, 97, 79, 233),
+        title: const Text(
+          'Cancer Prediction App',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Color.fromARGB(255, 184, 165, 230),
       ),
       body: Center(
-        child: Column(
-          children: <Widget>[
-            const PageTitle(pageTitle: 'Clinical Presentation'),
-            ChoiceButton(
-              text:
-                  'Establish histologic subtypea with adequate tissue for molecular testing',
-              onTap: () {
-                print('working ...');
-              },
-              infoPage: () {},
+        child: Card(
+          elevation: 30,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            side: BorderSide(
+              color: Colors.white,
             ),
-            ChoiceButton(
-              text: 'Consider rebiopsy or plasma testing if appropriate',
-              onTap: () {},
-              infoPage: () {},
+          ),
+          child: SizedBox(
+            height: 700,
+            width: 350,
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Image.asset(
+                      "assets/images/vector.jpg",
+                      height: 100,
+                      width: 100,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(8.0, 50, 60, 20),
+                    child: Text(
+                      'Clinical Presentation',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  ChoiceButton(
+                    text:
+                        'Establish histologic subtype with adequate tissue for molecular testing',
+                    onTap: () {
+                      print('working ...');
+                    },
+                    infoPage: () {},
+                  ),
+                  ChoiceButton(
+                    text: 'Consider rebiopsy or plasma testing if appropriate',
+                    onTap: () {},
+                    infoPage: () {},
+                  ),
+                  ChoiceButton(
+                    text: 'Smoking cessation counselling',
+                    onTap: () {},
+                    infoPage: () {},
+                  ),
+                  ChoiceButton(
+                    text: 'Integrate palliative care',
+                    onTap: () {},
+                    infoPage: () {},
+                  ),
+                ],
+              ),
             ),
-            ChoiceButton(
-              text: 'Smoking cessation counselling',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'Integrate palliative care',
-              onTap: () {},
-              infoPage: () {},
-            ),
-          ],
+          ),
         ),
       ),
       floatingActionButton: NextButton(
         onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return const NsclHistologicSubtype();
-                  },
-                ));
-              },
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) {
+              return const NsclHistologicSubtype();
+            },
+          ));
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       // bottomNavigationBar: NextButton(
