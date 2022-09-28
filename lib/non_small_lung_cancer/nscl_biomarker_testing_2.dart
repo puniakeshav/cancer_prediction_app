@@ -1,77 +1,45 @@
-import 'package:cancer_prediction_app/components/next_button.dart';
-import 'package:cancer_prediction_app/components/page_title.dart';
-import 'package:cancer_prediction_app/home.dart';
 import 'package:flutter/material.dart';
-import './../components/choice_button.dart';
-import './../components/next_button.dart';
+import '../components/options.dart';
+import '../components/options_screen.dart';
+import 'nscl_list_of_mutations.dart';
 
 class NsclBiomarkerTesting2 extends StatelessWidget {
   const NsclBiomarkerTesting2({Key? key}) : super(key: key);
+  static const options = [
+    UnselectableOption(
+      text: 'EGFR mutation',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: 'ALK',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: 'KRAS',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: 'ROS1',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: ' BRAF',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: 'NTRK1/2/3',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: ' METex14 skipping',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: 'RET',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: 'ERBB2 (HER2)',
+      infoPage: Text('No Info Page available')),
+    UnselectableOption(
+      text: ' PD-L1 testing (category 1)',
+      infoPage: Text('No Info Page available')),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: const Text('Cancer Prediction App'),
-        backgroundColor:  Color.fromARGB(200, 97, 79, 233),
-      ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            const PageTitle(pageTitle: 'Biomarker Testing'),
-            const Text('Perform the following Molecular Tests.'),
-            ChoiceButton(
-              text: 'EGFR mutation (category 1)',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'ALK (category 1)',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'KRAS',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'ROS1',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'BRAF',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: ' NTRK1/2/3',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: ' METex14 skipping',
-              onTap: () {},
-              infoPage: () {},
-            ),
-            ChoiceButton(
-              text: 'RET',
-              onTap: () {},
-              infoPage: () {},
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: NextButton(
-        onTap: () {
-          print('next button working...');
-        },
-      ),
-    );
+    return const OptionsScreenWithNext(pageTitle: 'Biomarker Testing',options: options, nextPage: NsclListOfMutations());
   }
 }

@@ -1,4 +1,5 @@
 import 'package:cancer_prediction_app/components/choice_button.dart';
+import 'package:cancer_prediction_app/components/bottom_navigation_bar';
 import 'package:flutter/material.dart';
 import './home.dart';
 import './components/choice_button.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'NotoSans',
-        // scaffoldBackgroundColor: Color.fromARGB(0, 211, 206, 247),
+        // scaffoldBackgroundColor: Color.fromARGB(255, 73, 72, 74),
       ),
       debugShowCheckedModeBanner: false,
       // home: const HomePage(),
