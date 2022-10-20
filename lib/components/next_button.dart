@@ -14,12 +14,12 @@ class NextButton extends StatelessWidget {
         width: 200,
         child: ElevatedButton(
             onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) {
-                return nextPage;
-              },
-            ));
-          },
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return nextPage;
+                },
+              ));
+            },
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
                   const Color.fromARGB(200, 97, 79, 233)),
