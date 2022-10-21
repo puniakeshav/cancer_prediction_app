@@ -1,5 +1,13 @@
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl24/nscl24_1.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl25/nscl25_1.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl31/nscl31.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl32/nscl32.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl33/nscl33.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl34/nscl34.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl35/nscl35_1.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl36/nscl36.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl37/nscl37.dart';
+import 'package:cancer_prediction_app/non_small_lung_cancer/nscl38/nscl38_1.dart';
 import 'package:flutter/material.dart';
 import '../components/options.dart';
 import '../components/options_screen.dart';
@@ -37,38 +45,38 @@ class NsclListOfMutations extends StatelessWidget {
         infoPage: Text('No info page available')),
     Option(
         text: 'BRAF V600E mutation positive',
-        nextPage: Text('....'),
+        nextPage: Nscl31(),
         infoPage: Text('No info page available')),
     Option(
         text: 'NTRK1/2/3 gene fusion positive',
-        nextPage: Text('....'),
+        nextPage: Nscl32(),
         infoPage: Text('No info page available')),
     Option(
         text: 'METex14 skipping mutation positive',
-        nextPage: Text('....'),
+        nextPage: Nscl33(),
         infoPage: Text('No info page available')),
     Option(
         text: 'RET rearrangement positive',
-        nextPage: Text('....'),
+        nextPage: Nscl34(),
         infoPage: Text('No info page available')),
     Option(
         text: 'ERBB2 (HER2) mutation positive',
-        nextPage: Text('....'),
+        nextPage: Nscl35_1(),
         infoPage: Text('No info page available')),
     Option(
         text:
             'PD-L1 ≥50% and negative for actionable molecular biomarkers above ',
-        nextPage: Text('....'),
+        nextPage: Nscl36(),
         infoPage: Text('No info page available')),
     Option(
         text:
             'PD-L1 ≥1%–49% and negative for actionable molecular biomarkers above',
-        nextPage: Text('....'),
+        nextPage: Nscl37(),
         infoPage: Text('No info page available')),
     Option(
         text:
             'PD-L1 <1% and negative for actionable molecular biomarkers above',
-        nextPage: Text('....'),
+        nextPage: Nscl38_1(),
         infoPage: Text('No info page available')),
   ];
 
