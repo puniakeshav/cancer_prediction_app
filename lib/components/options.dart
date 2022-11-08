@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../home.dart';
 
 class Option {
   final String text;
@@ -27,4 +26,11 @@ class OptionWithoutInfo {
 class OptionWithTextOnly{
   final String text;
   const OptionWithTextOnly({required this.text});
+}
+
+class InfoItem{
+  final String head;
+  final String body;
+
+  const InfoItem({required this.head,required this.body});
 }

@@ -19,7 +19,7 @@ class Nscl32 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'NTRK GENE FUSION POSITIVE', options: options);
   }
 }

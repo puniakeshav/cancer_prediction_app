@@ -19,7 +19,7 @@ class Nscl34 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'RET REARRANGEMENT POSITIVE', options: options);
   }
 }

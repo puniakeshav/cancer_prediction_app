@@ -20,7 +20,7 @@ class Nscl36 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'PD-L1 POSITIVE (≥50%)',
         options: options);
   }

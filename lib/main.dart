@@ -1,9 +1,5 @@
-import 'package:cancer_prediction_app/components/choice_button.dart';
-import 'package:cancer_prediction_app/components/bottom_navigation_bar';
 import 'package:flutter/material.dart';
 import './home.dart';
-import './components/choice_button.dart';
-import './non_small_lung_cancer/nscl_biomarker_testing_1.dart';
 
 void main() {
   runApp(const MyApp());

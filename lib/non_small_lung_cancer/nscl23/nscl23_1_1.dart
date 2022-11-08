@@ -33,7 +33,7 @@ class NsclMutation2FirstLineTherapy1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return  OptionsScreen(
         pageTitle: 'EGFR S768I, L861Q, and/or G719X MUTATIONS',
         options: options);
   }

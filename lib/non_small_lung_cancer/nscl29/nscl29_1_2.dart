@@ -1,7 +1,6 @@
 import 'package:cancer_prediction_app/components/options_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
-import '../nscl28/nscl28.dart';
 import '../nscl27/nscl27.dart';
 
 class NsclMutation6FirstLineTherapy2 extends StatelessWidget {
@@ -23,7 +22,7 @@ class NsclMutation6FirstLineTherapy2 extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return  OptionsScreen(
         pageTitle: 'ROS1 REARRANGEMENT POSITIVE: First Line Therapy',
         options: options);
   }

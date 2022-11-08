@@ -19,6 +19,6 @@ static const options = [
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenWithTextOnly(pageTitle: 'Clinical Presentation',options: options, nextPage: NsclHistologicSubtype());
+    return ScreenWithTextOnly(pageTitle: 'Clinical Presentation',options: options, nextPage: NsclHistologicSubtype());
   }
 }

@@ -19,7 +19,7 @@ class Nscl28SubsequentTherapy3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreenWithNext(
+    return OptionsScreenWithNext(
         pageTitle: 'ALK REARRANGEMENT POSITIVE: Subsequent Therapy',
         options: options,
         nextPage: Nscl27FinalProgression());

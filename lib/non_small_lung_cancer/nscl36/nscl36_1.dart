@@ -4,6 +4,7 @@ import 'package:cancer_prediction_app/non_small_lung_cancer/nscl36/nscl36_1_2.da
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
 
+// ignore: camel_case_types
 class Nscl36_1 extends StatelessWidget {
   const Nscl36_1({Key? key}) : super(key: key);
   static const options = [
@@ -20,7 +21,7 @@ class Nscl36_1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'PD-L1 POSITIVE (≥50%)',
         options: options);
   }

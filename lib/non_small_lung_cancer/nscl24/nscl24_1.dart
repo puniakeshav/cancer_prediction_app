@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../components/options.dart';
 import '../../components/options_screen.dart';
 
+// ignore: camel_case_types
 class Nscl24_1 extends StatelessWidget {
   const Nscl24_1({Key? key}) : super(key: key);
   static const options = [
@@ -12,7 +13,7 @@ class Nscl24_1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreenWithNext(
+    return  OptionsScreenWithNext(
         pageTitle: 'First Line Therapy',
         options: options,
         nextPage: Nscl24_2());

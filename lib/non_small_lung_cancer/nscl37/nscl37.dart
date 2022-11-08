@@ -1,6 +1,4 @@
 import 'package:cancer_prediction_app/components/options_screen.dart';
-import 'package:cancer_prediction_app/non_small_lung_cancer/nscl36/nscl36_1.dart';
-import 'package:cancer_prediction_app/non_small_lung_cancer/nscl36/nscl36_2.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl37/nscl37_1.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl37/nscl37_2.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +20,7 @@ class Nscl37 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'PD-L1 POSITIVE  (≥1%–49%)',
         options: options);
   }

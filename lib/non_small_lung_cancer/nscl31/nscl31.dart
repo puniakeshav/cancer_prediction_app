@@ -19,7 +19,7 @@ class Nscl31 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'BRAF V600E MUTATION POSITIVE', options: options);
   }
 }

@@ -17,7 +17,7 @@ class Nscl21SubsequentTherapy1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreenWithNext(
+    return OptionsScreenWithNext(
         pageTitle:
             'EGFR EXON 19 DELETION OR L858R MUTATIONS: Subsequent Therapy',
         options: options,

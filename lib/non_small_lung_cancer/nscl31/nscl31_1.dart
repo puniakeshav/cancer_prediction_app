@@ -1,10 +1,9 @@
 import 'package:cancer_prediction_app/components/options_screen.dart';
-import 'package:cancer_prediction_app/non_small_lung_cancer/nscl21/nscl21_5.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl31/nscl31_3.dart';
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
-import '../nscl27/nscl27_5.dart';
 
+// ignore: camel_case_types
 class Nscl31_1 extends StatelessWidget {
   const Nscl31_1({Key? key}) : super(key: key);
   static const options = [
@@ -20,7 +19,7 @@ class Nscl31_1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return OptionsScreen(
         pageTitle: 'First Line Therapy', options: options);
   }
 }

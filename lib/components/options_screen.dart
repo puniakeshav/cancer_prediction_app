@@ -1,4 +1,3 @@
-import 'package:cancer_prediction_app/home.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_bar';
 import 'choice_button.dart';
@@ -8,7 +7,8 @@ import 'options.dart';
 class OptionsScreen extends StatelessWidget {
   final List<Option> options;
   final String pageTitle;
-  const OptionsScreen({required this.options,required this.pageTitle, Key? key}) : super(key: key);
+  // ignore: prefer_const_constructors_in_immutables
+  OptionsScreen({required this.options,required this.pageTitle, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ class OptionsScreenWithNext extends StatelessWidget {
   final List<UnselectableOption> options;
   final String pageTitle;
   final Widget nextPage;
-  const OptionsScreenWithNext({required this.options,required this.pageTitle,required this.nextPage, Key? key})
+  OptionsScreenWithNext({required this.options,required this.pageTitle,required this.nextPage, Key? key})
       : super(key: key);
 
   @override
@@ -222,7 +222,7 @@ class OptionsScreenWithNext extends StatelessWidget {
 class OptionsScreenWithoutInfo extends StatelessWidget {
   final List<OptionWithoutInfo> options;
   final String pageTitle;
-  const OptionsScreenWithoutInfo({required this.options,required this.pageTitle, Key? key}) : super(key: key);
+  OptionsScreenWithoutInfo({required this.options,required this.pageTitle, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -324,7 +324,7 @@ class ScreenWithTextOnly extends StatelessWidget {
   final List<OptionWithTextOnly> options;
   final String pageTitle;
   final Widget nextPage;
-  const ScreenWithTextOnly({required this.options,required this.pageTitle,required this.nextPage, Key? key}) : super(key: key);
+  ScreenWithTextOnly({required this.options,required this.pageTitle,required this.nextPage, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

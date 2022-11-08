@@ -15,7 +15,7 @@ class Nscl32_3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreenWithNext(
+    return OptionsScreenWithNext(
         pageTitle: 'Subsequent Therapy',
         options: options,
         nextPage: Text('No next page'));

@@ -1,8 +1,6 @@
 import 'package:cancer_prediction_app/components/options_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
-import '../nscl20/nscl20_1_1.dart';
-import '../nscl20/nscl20_1_2.dart';
 import 'nscl23_1_1.dart';
 import 'nscl23_1_2.dart';
 
@@ -21,7 +19,7 @@ class NsclMutation2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return  OptionsScreen(
         pageTitle: 'EGFR S768I, L861Q, and/or G719X MUTATIONS',
         options: options);
   }

@@ -1,7 +1,6 @@
 import 'package:cancer_prediction_app/components/options_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
-import '../nscl21/nscl21_5.dart';
 
 class Nscl27SubsequentTherapy4 extends StatelessWidget {
   const Nscl27SubsequentTherapy4({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class Nscl27SubsequentTherapy4 extends StatelessWidget {
   @override
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return  OptionsScreen(
         pageTitle: 'ALK REARRANGEMENT POSITIVE: Subsequent Therapy',
         options: options);
   }

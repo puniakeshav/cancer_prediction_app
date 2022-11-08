@@ -41,7 +41,7 @@ class NsclMutation1FirstLineTherapy1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return  OptionsScreen(
       pageTitle: 'EGFR EXON 19 DELETION OR L858R MUTATIONS',
       options: options,
     );

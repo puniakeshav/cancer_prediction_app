@@ -1,7 +1,6 @@
 import 'package:cancer_prediction_app/components/options_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
-import '../nscl21/nscl21_5.dart';
 
 class Nscl22SubsequentTherapy4b extends StatelessWidget {
   const Nscl22SubsequentTherapy4b({Key? key}) : super(key: key);
@@ -19,7 +18,7 @@ class Nscl22SubsequentTherapy4b extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const OptionsScreen(
+    return  OptionsScreen(
         pageTitle:
             'EGFR EXON 19 DELETION OR L858R MUTATIONS: Subsequent Therapy',
         options: options);
