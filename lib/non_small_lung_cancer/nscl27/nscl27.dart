@@ -8,30 +8,26 @@ import 'nscl27_4.dart';
 
 class Nscl27 extends StatelessWidget {
   const Nscl27({Key? key}) : super(key: key);
-  static const options = [
-    Option(
+  static List<OptionWithoutInfo> optionWithoutInfo = [
+    OptionWithoutInfo(
         text: 'Asymptomatic',
-        nextPage: Nscl27SubsequentTherapy1(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl27SubsequentTherapy1()),
+    OptionWithoutInfo(
         text: 'Symptomatic (Brain)',
-        nextPage: Nscl27SubsequentTherapy2(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl27SubsequentTherapy2()),
+       
+    OptionWithoutInfo(
         text: 'Symptomatic(Systemic, Limited metastases)',
-        nextPage: Nscl27SubsequentTherapy3(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl27SubsequentTherapy3()),
+    OptionWithoutInfo(
         text: 'Symptomatic(Systemic, Multiple lesions)',
-        nextPage: Nscl27SubsequentTherapy4(),
-        infoPage: Text('No info page available')),
+        nextPage: Nscl27SubsequentTherapy4()),
+
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreen(
-        pageTitle:
-            'EGFR EXON 19 DELETION OR L858R MUTATIONS: Progression on osimertinib',
-        options: options);
+    return OptionsScreenWithoutInfo(
+        pageTitle: 'ALK REARRANGEMENT POSITIVE', options: optionWithoutInfo);
   }
 }

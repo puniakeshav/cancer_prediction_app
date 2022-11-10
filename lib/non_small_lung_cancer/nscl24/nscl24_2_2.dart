@@ -14,7 +14,7 @@ class Nscl24_2_2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OptionsScreenWithNext(
-        pageTitle: 'Subsequent Therapy',
+        pageTitle: 'EGFR EXON 20 INSERTION MUTATION POSITIVE: Subsequent Therapy',
         options: options,
         nextPage: Nscl24_2_2());
   }

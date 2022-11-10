@@ -20,7 +20,7 @@ class Nscl24_2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OptionsScreenWithoutInfo(
-        pageTitle: 'First Line Therapy',
+        pageTitle: 'EGFR EXON 20 INSERTION MUTATION POSITIVE: First Line Therapy',
         options: options);
   }
 }
