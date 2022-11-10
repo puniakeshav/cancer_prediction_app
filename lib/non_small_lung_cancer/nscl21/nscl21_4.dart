@@ -6,20 +6,19 @@ import 'nscl21_5.dart';
 class Nscl21SubsequentTherapy4 extends StatelessWidget {
   const Nscl21SubsequentTherapy4({Key? key}) : super(key: key);
   static const options = [
-    UnselectableOption(
-        text: 'Systemic therapy', infoPage: Text('No info page available')),
-    UnselectableOption(
+    OptionWithoutInfo(
+        text: 'Systemic therapy', nextPage: Nscl21FinalProgression()),
+    OptionWithoutInfo(
         text: 'Adenocarcinoma  or Squamous Cell Carcinoma ',
-        infoPage: Text('No info page available')),
+        nextPage: Nscl21FinalProgression()),
     //check info part for this
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreenWithNext(
+    return  OptionsScreenWithoutInfo(
         pageTitle:
             'EGFR EXON 19 DELETION OR L858R MUTATIONS: Subsequent Therapy',
-        options: options,
-        nextPage: Nscl21FinalProgression());
+        options: options,);
   }
 }

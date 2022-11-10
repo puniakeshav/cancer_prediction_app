@@ -10,31 +10,26 @@ import 'nscl22_4b.dart';
 class Nscl22 extends StatelessWidget {
   const Nscl22({Key? key}) : super(key: key);
   static const options = [
-    Option(
+    OptionWithoutInfo(
         text: 'Asymptomatic',
-        nextPage: Nscl22SubsequentTherapy1(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl22SubsequentTherapy1(),),
+    OptionWithoutInfo(
         text: 'Symptomatic (Brain)',
-        nextPage: Nscl22SubsequentTherapy2(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl22SubsequentTherapy2(),),
+    OptionWithoutInfo(
         text: 'Symptomatic(Systemic, Limited metastases)',
-        nextPage: Nscl22SubsequentTherapy3(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl22SubsequentTherapy3(),),
+    OptionWithoutInfo(
         text: 'Symptomatic(Systemic, Multiple lesions, T790M+)',
-        nextPage: Nscl22SubsequentTherapy4a(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl22SubsequentTherapy4a(),),
+    OptionWithoutInfo(
         text: 'Symptomatic(Systemic, Multiple lesions, T790M-)',
-        nextPage: Nscl22SubsequentTherapy4b(),
-        infoPage: Text('No info page available')),
+        nextPage: Nscl22SubsequentTherapy4b(),),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreen(
+  return  OptionsScreenWithoutInfo(
         pageTitle:
             'EGFR EXON 19 DELETION OR L858R MUTATIONS: Progression on erlotinib (± ramucirumab or bevacizumab),afatinib,gefitinib, or dacomitinib',
         options: options);

@@ -5,17 +5,16 @@ import '../../components/options.dart';
 class Nscl21FinalProgression extends StatelessWidget {
   const Nscl21FinalProgression({Key? key}) : super(key: key);
   static const options = [
-    Option(
-        text: 'Progression, therapy for multiple lesions',
-        nextPage: Text("..."),
-        infoPage: Text('No info page available')),
+    OptionWithTextOnly(
+        text: 'Progression, therapy for multiple lesions',),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreen(
+    return  ScreenWithTextOnly(
         pageTitle:
             'EGFR EXON 19 DELETION OR L858R MUTATIONS: Subsequent Therapy',
-        options: options);
+        options: options,
+        nextPage: Nscl21FinalProgression(),);
   }
 }

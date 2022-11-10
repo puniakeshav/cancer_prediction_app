@@ -8,20 +8,18 @@ import '../../components/options.dart';
 class Nscl25_2 extends StatelessWidget {
   const Nscl25_2({Key? key}) : super(key: key);
   static const options = [
-    Option(
+    OptionWithoutInfo(
         //add text : Preferred
         text: 'Progression',
-        nextPage: Nscl25_2_1(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl25_2_1(),),
+    OptionWithoutInfo(
         text: 'Response or stable disease',
-        nextPage: Nscl25_2_2(),
-        infoPage: Text('No info page available')),
+        nextPage: Nscl25_2_2(),),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreen(
+    return  OptionsScreenWithoutInfo(
         pageTitle: 'First Line Therapy',
         options: options);
   }
