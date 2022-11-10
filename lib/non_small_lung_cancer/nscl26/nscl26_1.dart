@@ -6,22 +6,20 @@ import 'nscl26_1_2.dart';
 
 class NsclMutation5 extends StatelessWidget {
   const NsclMutation5({Key? key}) : super(key: key);
-  static const options = [
-    Option(
-        text:
-            'ALK rearrangement discovered prior to first-line systemic therapy',
-        nextPage: NsclMutation5FirstLineTherapy1(),
-        infoPage: Text('No info page available')),
-    Option(
-        text:
-            ' ALK rearrangement discovered during first-line systemic therapy',
-        nextPage: NsclMutation5FirstLineTherapy2(),
-        infoPage: Text('No info page available')),
+  static List<OptionWithoutInfo> optionWithoutInfo = [
+    const OptionWithoutInfo(
+      text: 'ALK rearrangement discovered prior to first-line systemic therapy',
+      nextPage: NsclMutation5FirstLineTherapy1(),
+    ),
+    const OptionWithoutInfo(
+      text: ' ALK rearrangement discovered during first-line systemic therapy',
+      nextPage: NsclMutation5FirstLineTherapy2(),
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreen(
-        pageTitle: 'ALK REARRANGEMENT POSITIVE', options: options);
+    return OptionsScreenWithoutInfo(
+        pageTitle: 'ALK REARRANGEMENT POSITIVE', options: optionWithoutInfo);
   }
 }
