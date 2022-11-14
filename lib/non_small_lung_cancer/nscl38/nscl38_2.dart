@@ -1,3 +1,4 @@
+import 'package:cancer_prediction_app/components/info_screen.dart';
 import 'package:cancer_prediction_app/components/options_screen.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl38/nscl38_2_1.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl38/nscl38_2_2.dart';

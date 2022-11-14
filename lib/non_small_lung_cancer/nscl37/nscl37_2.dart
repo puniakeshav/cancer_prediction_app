@@ -1,14 +1,15 @@
+import 'package:cancer_prediction_app/components/info_screen.dart';
 import 'package:cancer_prediction_app/components/options_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/options.dart';
 
 class Nscl37_2 extends StatelessWidget {
   const Nscl37_2({Key? key}) : super(key: key);
-  static const options = [
+  static List<UnselectableOption> options = [
     UnselectableOption(
         //add text : Preferred
         text: 'Pallative care',
-        infoPage: Text('No info page available')),
+        infoPage: info1),
   ];
 
   @override
@@ -19,3 +20,11 @@ class Nscl37_2 extends StatelessWidget {
         nextPage: Text('No next page') );
   }
 }
+
+Widget info1 = InfoPage(pageName: "Pallative care", infoList: [
+  InfoItem("",head: "About", body: "Palliative care is an approach that improves the quality of life of patients (adults and children) and their families who are facing problems associated with life-threatening illness. It prevents and relieves suffering through the early identification, correct assessment and treatment of pain and other problems, whether physical, psychosocial or spiritual."),
+  
+
+
+], links: ["https://www.who.int/news-room/fact-sheets/detail/palliative-care"])
+

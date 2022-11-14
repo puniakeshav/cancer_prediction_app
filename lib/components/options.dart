@@ -32,5 +32,5 @@ class InfoItem{
   final String head;
   final String body;
 
-  const InfoItem({required this.head,required this.body});
+  const InfoItem(required String head, {required this.head,required this.body});
 }
