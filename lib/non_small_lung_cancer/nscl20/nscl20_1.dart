@@ -7,19 +7,17 @@ import 'nscl20_1_2.dart';
 class NsclMutation1 extends StatelessWidget {
   const NsclMutation1({Key? key}) : super(key: key);
   static const options = [
-    Option(
+    OptionWithoutInfo(
         text: 'EGFR mutation discovered prior to first-line systemic therapy',
-        nextPage: NsclMutation1FirstLineTherapy1(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: NsclMutation1FirstLineTherapy1(),),
+    OptionWithoutInfo(
         text: ' EGFR mutation discovered during first-line systemic therapy',
-        nextPage: NsclMutation1FirstLineTherapy2(),
-        infoPage: Text('No info page available')),
+        nextPage: NsclMutation1FirstLineTherapy2(),),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  OptionsScreen(
+    return  OptionsScreenWithoutInfo(
         pageTitle: 'EGFR EXON 19 DELETION OR L858R MUTATIONS',
         options: options);
   }

@@ -5,6 +5,36 @@ import '../components/options.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl_biomarker_testing_1.dart';
 import 'package:cancer_prediction_app/non_small_lung_cancer/nscl_biomarker_testing_2.dart';
 
+
+
+class NsclHistologicSubtype extends StatelessWidget {
+  const NsclHistologicSubtype({Key? key}) : super(key: key);
+  static List<Option> options = [
+    Option(
+      text: 'Adenocarcinoma',
+      nextPage: const NsclBiomarkerTesting1(),
+      infoPage: info1),
+    Option(
+      text: ' Large cell',
+      nextPage: NsclBiomarkerTesting1(),
+      infoPage: info2),
+    Option(
+      text: 'NSCLC not otherwise specified (NOS)',
+      nextPage: NsclBiomarkerTesting1(),
+      infoPage: info3),
+    Option(
+      text: 'Squamous cell carcinoma',
+      nextPage:  NsclBiomarkerTesting2(),
+      infoPage:  info3),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return OptionsScreen(pageTitle: 'Histological Subtype',options: options);
+  }
+}
+
+
 Widget info1 = const InfoPage(pageName: "Adenocarcinoma", infoList: [
   InfoItem(head: "About", body: "Cancer forms in the glandular tissue, which lines certain internal organs and makes and releases substances in the body, such as mucus, digestive juices, and other fluids. Most cancers of the breast, lung, esophagus, stomach, colon, rectum, pancreas, prostate, and uterus are adenocarcinomas."),
   InfoItem(head: "What’s the difference between adenocarcinoma and carcinoma?", body: "Carcinoma is the most common form of cancer. It starts in the epithelial tissue of your skin or internal organs. Adenocarcinoma is a subtype of carcinoma. It grows in the glands that line the insides of your organs."),
@@ -41,35 +71,3 @@ Widget info3 = InfoPage(pageName: "Squamous Cell Carcinoma",
     "https://en.wikipedia.org/wiki/Squamous_cell_carcinoma",
   ],
 );
-
-
-
-class NsclHistologicSubtype extends StatelessWidget {
-  const NsclHistologicSubtype({Key? key}) : super(key: key);
-  static List<Option> options = [
-    Option(
-      text: 'Adenocarcinoma',
-      nextPage: const NsclBiomarkerTesting1(),
-      infoPage: info1),
-    Option(
-      text: ' Large cell',
-      nextPage: NsclBiomarkerTesting1(),
-      infoPage: info2),
-    Option(
-      text: 'NSCLC not otherwise specified (NOS)',
-      nextPage: NsclBiomarkerTesting1(),
-      infoPage: info3),
-    Option(
-      text: 'Squamous cell carcinoma',
-      nextPage:  NsclBiomarkerTesting2(),
-      infoPage:  info3),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return OptionsScreen(pageTitle: 'Histological Subtype',options: options);
-  }
-}
-
-
-

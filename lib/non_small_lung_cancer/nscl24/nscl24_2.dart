@@ -8,21 +8,19 @@ import '../../components/options.dart';
 class Nscl24_2 extends StatelessWidget {
   const Nscl24_2({Key? key}) : super(key: key);
   static const options = [
-    Option(
+    OptionWithoutInfo(
         //add text : Preferred
         text: 'Progression',
-        nextPage: Nscl24_2_1(),
-        infoPage: Text('No info page available')),
-    Option(
+        nextPage: Nscl24_2_1(),),
+    OptionWithoutInfo(
         text: 'Response or stable disease',
-        nextPage: Nscl24_2_2(),
-        infoPage: Text('No info page available')),
+        nextPage: Nscl24_2_2(),),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return OptionsScreen(
-        pageTitle: 'First Line Therapy',
+    return OptionsScreenWithoutInfo(
+        pageTitle: 'EGFR EXON 20 INSERTION MUTATION POSITIVE: First Line Therapy',
         options: options);
   }
 }
